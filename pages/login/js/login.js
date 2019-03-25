@@ -70,7 +70,7 @@ var PageLogin = function(){
         funJudgeLogin: function() {
             var token = $.cookie("token");
             var isLogin = function() {
-                PageMain.callAjax(PageMain.defaultOption.httpUrl + "/user/info", {"token": token}, function (data) {
+                PageMain.callAjax(PageMain.defaultOption.httpUrl + "/xyUser/info", {"token": token}, function (data) {
                     if (data.success)
                     {
                         customerLogin = true;

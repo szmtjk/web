@@ -63,7 +63,7 @@
     <tbody>
     <tr>
         <td id="top_left" style="height:48px;width:530px;">
-            <span id="xtname"></span>
+            <!--<span id="xtname"></span>-->
         </td>
         <td id="top_sys"></td>
         <td id="top_right" style="height:100%;width:130px;">
@@ -162,6 +162,24 @@
                     <li onclick="PageHome.funAddTab(this, '../systeminfo/actionResources.html')">权限信息管理</li>
                 </ul>
             </li>-->
+            <li class="pli">
+                <div style="padding: 6px 0;">
+                    <span>预约体检管理</span>
+                    <img class="ge_img" src="../../jslib/theme/sea/images/next_0.png" style="float: right;padding:6px;">
+                </div>
+                <ul class="nav1">
+                    <li onclick="PageHome.funAddTab(this, '../yytjmanagement/yytjBatchImport.html')">体检预约批量导入</li>
+                </ul>
+            </li>
+            <li class="pli">
+                <div style="padding: 6px 0;">
+                    <span>体检报告管理</span>
+                    <img class="ge_img" src="../../jslib/theme/sea/images/next_0.png" style="float: right;padding:6px;">
+                </div>
+                <ul class="nav1">
+                    <li onclick="PageHome.funAddTab(this, '../tjbgmanagement/tjbgBatchImport.html')">体检报告批量导入</li>
+                </ul>
+            </li>
         </ol>
     </div>
 </div>
@@ -269,7 +287,7 @@
         {
             var token = $.cookie('token');
             if (token != undefined && token != null ) {
-                PageMain.callAjax(PageMain.defaultOption.httpUrl + "/user/info", {"token": token}, function (data) {
+                PageMain.callAjax(PageMain.defaultOption.httpUrl + "/xyUser/info", {"token": token}, function (data) {
                     if (data.success)
                     {
                         var result = data.data;

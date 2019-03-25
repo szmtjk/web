@@ -58,6 +58,10 @@
             console.log("error");
         }, false);
         xhr.open("POST", options.url);
+        var token = $.cookie('token');
+        if (token && token != undefined) {
+            xhr.setRequestHeader('token', $.cookie('token'));
+        }
         xhr.send(fd);
     }
     function ajaxSubmit(target) {
