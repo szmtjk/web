@@ -6,6 +6,21 @@
     <script type="text/javascript" src="../../jslib/miniui/file/jquery.upload2.js"></script>
     <script type="text/javascript" src="./js/batchImport.js"></script>
     <title></title>
+    <style>
+        .uppicarea {
+            height: 100%;
+        }
+        .file-upload {
+            display: inline-block;
+            padding: 3px 20px;
+            color: #333;
+            border-radius: 3px;
+            color: #fff;
+            background-color: #409eff;
+            border: 1px solid #409eff;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <div class="mini-layout" style="width: 100%;height: 100%;" allowResize="false">
@@ -34,7 +49,9 @@
                 <!--<a class="mini-button" iconCls="icon-reset" onclick="PageDataDictionary.funReset()" plain="true"><label>重置</label></a>-->
             <!--</div>-->
             <div class="uppicarea">
-                <input class="upload-file" name="zipFile" title="点击上传" type="file" value="上传" accept="">
+                <!--<input class="upload-file" name="zipFile" title="点击上传" type="file" value="上传" accept="">-->
+                <!--<input type="button" class="file-upload" value="文件上传" onclick="PageYytjImport.funcDoUpload()">-->
+                <span class="file-upload" onclick="PageYytjImport.funcDoUpload()">文件上传</span>
             </div>
         </div>
         <div class="mini-fit">
