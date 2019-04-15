@@ -95,7 +95,7 @@ var PageTjbgImport = function(){
                 buttons: ["ok", "cancel"],
                 message: "文件上传",
                 html: htmlContent,
-                showModal: false,
+                showModal: true,
                 callback: function (action) {
                     var file = $('.upload-file');
                     if (action == 'ok') {
