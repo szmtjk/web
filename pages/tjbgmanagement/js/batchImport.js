@@ -61,7 +61,7 @@ var PageTjbgImport = function(){
          */
         funImageAjaxSubmit: function($this,id,flag) {
             $this.upload({
-                url: PageMain.defaultOption.httpUrl + '/file/uploadExamReservationZip',
+                url: PageMain.defaultOption.httpUrl + '/file/uploadExamReportZip',
                 params: {token: $.cookie('token')},
                 dataType: 'json',
                 onSend: function ($this, str) {
