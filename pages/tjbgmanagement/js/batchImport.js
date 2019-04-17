@@ -27,8 +27,8 @@ var PageTjbgImport = function(){
         {
             var tjbgSearchForm = new mini.Form("tjbgSearchForm");
             tjbgSearchForm.setData();
-            mini.get("bizType").setValue("1");
-            mini.get("queryParamFlag").setValue("1");
+            mini.get("bizType").setValue("2");
+            mini.get("queryParamFlag").setValue("2");
             this.dataTjbgGrid.load(tjbgSearchForm.getData());
         },
         funRendererStatus : function (e)
