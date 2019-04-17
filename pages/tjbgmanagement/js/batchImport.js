@@ -60,6 +60,7 @@ var PageTjbgImport = function(){
          * @param flag 自定义回调渲染
          */
         funImageAjaxSubmit: function($this,id,flag) {
+            var that = this;
             $this.upload({
                 url: PageMain.defaultOption.httpUrl + '/file/uploadExamReportZip',
                 params: {token: $.cookie('token')},
@@ -78,7 +79,7 @@ var PageTjbgImport = function(){
                     mini.unmask(document.body);
                     if(data.success && data.data){
                         PageMain.funShowMessageBox("上传成功");
-                        this.dataTjbgGrid.reload();
+                        that.dataTjbgGrid.reload();
                     } else {
                         PageMain.funShowMessageBox("附件上传失败");
                         return false;
